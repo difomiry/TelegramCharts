@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843F02692236848000B41CD4 /* TelegramChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02682236848000B41CD4 /* TelegramChart.swift */; };
+		843F026B223684E500B41CD4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F026A223684E500B41CD4 /* DataManager.swift */; };
 		84E49C5D223597D9003073D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E49C5C223597D9003073D5 /* AppDelegate.swift */; };
 		84E49C62223597D9003073D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E49C60223597D9003073D5 /* Main.storyboard */; };
 		84E49C64223597D9003073D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E49C63223597D9003073D5 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843F02682236848000B41CD4 /* TelegramChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramChart.swift; sourceTree = "<group>"; };
+		843F026A223684E500B41CD4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		84E49C59223597D8003073D5 /* TelegramCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E49C5C223597D9003073D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E49C61223597D9003073D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				84E49C5C223597D9003073D5 /* AppDelegate.swift */,
+				843F026A223684E500B41CD4 /* DataManager.swift */,
+				843F02682236848000B41CD4 /* TelegramChart.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E49C5D223597D9003073D5 /* AppDelegate.swift in Sources */,
+				843F026B223684E500B41CD4 /* DataManager.swift in Sources */,
+				843F02692236848000B41CD4 /* TelegramChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
