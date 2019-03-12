@@ -4,14 +4,14 @@ typealias Points = [Int]
 typealias Strings = [String: String]
 typealias Columns = [String: Points]
 
-struct TelegramChart {
+struct Chart {
   let colors: Strings
   let columns: Columns
   let names: Strings
   let types: Strings
 }
 
-extension TelegramChart: Codable {
+extension Chart: Codable {
 
   init(from decoder: Decoder) throws {
 

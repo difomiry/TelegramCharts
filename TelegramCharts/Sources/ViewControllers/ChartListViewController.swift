@@ -4,7 +4,9 @@ final class ChartListViewController: UIViewController {
 
   @IBOutlet private var tableView: UITableView!
 
-  private var charts: [TelegramChart]?
+  private let dataProvider: DataProviderType = DataProvider()
+
+  private var charts: [Chart]?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -14,10 +16,10 @@ final class ChartListViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
 
-    DataManager.shared.fetchCharts(success: handleCharts, failure: handleError)
+    dataProvider.fetchCharts(success: handleCharts, failure: handleError)
   }
 
-  fileprivate func handleCharts(charts: [TelegramChart]) {
+  fileprivate func handleCharts(charts: [Chart]) {
     self.charts = charts
   }
 
