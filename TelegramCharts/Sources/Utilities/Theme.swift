@@ -11,13 +11,13 @@ struct Theme {
   static let day = Theme(
     identifier: "com.difomiry.TelegramCharts.themes.day",
     statusBarStyle: .default,
-    navigationBarBackgroundColor: .white,
+    navigationBarBackgroundColor: UIColor(hexString: "#F7F7F7") ?? .white,
     navigationBarForegroundColor: .black)
 
   static let night = Theme(
     identifier: "com.difomiry.TelegramCharts.themes.night",
     statusBarStyle: .lightContent,
-    navigationBarBackgroundColor: .black,
+    navigationBarBackgroundColor: UIColor(hexString: "#213040") ?? .black,
     navigationBarForegroundColor: .white)
 
 }
