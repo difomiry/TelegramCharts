@@ -1,6 +1,6 @@
 import UIKit
 
-final class ChartViewController: ThemableController {
+final class ChartViewController: ThemeableController {
 
   private var chart: Chart!
 

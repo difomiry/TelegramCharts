@@ -30,7 +30,7 @@ fileprivate class ThemeManager {
 
 }
 
-class ThemableController: UIViewController {
+class ThemeableController: UIViewController {
 
   fileprivate var themeManager = ThemeManager.shared
 
@@ -58,7 +58,7 @@ class ThemableController: UIViewController {
 }
 
 
-extension ThemableController: Themeable {
+extension ThemeableController: Themeable {
 
   func apply(for theme: Theme) {
 
