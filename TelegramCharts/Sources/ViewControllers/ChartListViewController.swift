@@ -13,6 +13,11 @@ final class ChartListViewController: ThemeableController {
 
     title = "Charts"
 
+    tableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 1))
+    tableView.tableFooterView?.backgroundColor = theme.separatorColor
+
+    tableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
+
     tableView.delegate = self
     tableView.dataSource = self
 
@@ -25,6 +30,13 @@ final class ChartListViewController: ThemeableController {
 
   fileprivate func handleError(error: Error) {
     print(error.localizedDescription)
+  }
+
+  override func apply(for theme: Theme) {
+    super.apply(for: theme)
+
+    tableView.separatorColor = theme.separatorColor
+    tableView.tableFooterView?.backgroundColor = theme.separatorColor
   }
 
 }
@@ -47,9 +59,9 @@ extension ChartListViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
 
-    cell.textLabel?.text = charts?[indexPath.row].names.map { $0.key }.joined(separator: " ")
+    cell.configure(with: charts?[indexPath.row].names.map { $0.key }.joined(separator: " ") ?? "")
 
     return cell
   }

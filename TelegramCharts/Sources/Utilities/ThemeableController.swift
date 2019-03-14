@@ -1,6 +1,6 @@
 import UIKit
 
-class ThemeableController: UIViewController {
+class ThemeableController: UIViewController, Themeable {
 
   private var themeManager = ThemeManager.shared
 
@@ -25,11 +25,6 @@ class ThemeableController: UIViewController {
     themeManager.register(themeable: self)
   }
 
-}
-
-
-extension ThemeableController: Themeable {
-
   func apply(for theme: Theme) {
 
     themedStatusBarStyle = theme.statusBarStyle
@@ -40,6 +35,8 @@ extension ThemeableController: Themeable {
     navigationController?.navigationBar.titleTextAttributes = [
       NSAttributedString.Key.foregroundColor: theme.navigationBarForegroundColor
     ]
+
+    view.backgroundColor = theme.backgroundColor
   }
 
 }

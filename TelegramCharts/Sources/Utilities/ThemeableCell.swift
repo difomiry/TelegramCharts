@@ -1,6 +1,6 @@
 import UIKit
 
-class ThemeableCell: UITableViewCell {
+class ThemeableCell: UITableViewCell, Themeable {
 
   private var themeManager = ThemeManager.shared
 
@@ -9,10 +9,6 @@ class ThemeableCell: UITableViewCell {
 
     themeManager.register(themeable: self)
   }
-
-}
-
-extension ThemeableCell: Themeable {
 
   func apply(for theme: Theme) {}
 
