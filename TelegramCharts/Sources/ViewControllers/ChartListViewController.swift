@@ -1,6 +1,6 @@
 import UIKit
 
-final class ChartListViewController: UIViewController {
+final class ChartListViewController: ThemableController {
 
   @IBOutlet private var tableView: UITableView!
 
