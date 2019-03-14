@@ -1,6 +1,6 @@
 # TelegramCharts
 
-A solution for telegram official coding competition for iOS
+A solution for telegram official coding competition for iOS.
 
 You can see more information about competition in [official telegram channel](https://t.me/contest).
 
