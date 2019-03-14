@@ -49,7 +49,7 @@ extension ChartListViewController: UITableViewDataSource {
 
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") ?? UITableViewCell(style: .default, reuseIdentifier: "Cell")
 
-    cell.textLabel?.text = "\(indexPath.row)"
+    cell.textLabel?.text = charts?[indexPath.row].names.map { $0.key }.joined(separator: " ")
 
     return cell
   }
