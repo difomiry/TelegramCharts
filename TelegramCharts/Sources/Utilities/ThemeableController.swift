@@ -25,6 +25,9 @@ fileprivate class ThemeManager {
   }
 
   func register(themeable: Themeable) {
+
+    themeable.apply(for: theme)
+
     observers.add(themeable)
   }
 
