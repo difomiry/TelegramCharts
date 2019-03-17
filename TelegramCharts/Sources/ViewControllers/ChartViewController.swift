@@ -35,7 +35,12 @@ final class ChartViewController: ThemeableController {
 extension ChartViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    theme = theme == Theme.day ? Theme.night : Theme.day
+    switch (indexPath.section, indexPath.row) {
+    case (1, 0):
+      theme = theme == Theme.day ? Theme.night : Theme.day
+    default:
+      break
+    }
   }
 
 }
@@ -43,34 +48,62 @@ extension ChartViewController: UITableViewDelegate {
 extension ChartViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return indexPath.section == 0 ? 300 : 44
+    switch (indexPath.section, indexPath.row) {
+    case (0, 0):
+      return 300 // chart
+    default:
+      return 44 // others
+    }
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return section == 0 ? 60 : 40
+    switch section {
+    case 0:
+      return 60 // 'Followers' section header
+    case 1:
+      return 40 // Empty section header for theme switcher
+    default:
+      return 60
+    }
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 2
+    return 2 // 'Followers' and theme switcher
   }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
     let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionHeader") as! SectionHeader
-    if section == 0 {
+
+    switch section {
+    case 0:
       view.configure(with: "Followers")
+    default:
+      break
     }
+
     return view
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    switch section {
+    case 0:
+      return 1 // chart in 'Followers' section
+    case 1:
+      return 1 // theme switcher
+    default:
+      return 0
+    }
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if indexPath.section == 0 {
-      return UITableViewCell()
-    } else {
+    switch (indexPath.section, indexPath.row) {
+    case (0, 0):
+      return UITableViewCell() // chart
+    case (1, 0):
       return tableView.dequeueReusableCell(withIdentifier: "ThemeSwitcherCell") as! ThemeSwitcherCell
+    default:
+      return UITableViewCell()
     }
   }
 
