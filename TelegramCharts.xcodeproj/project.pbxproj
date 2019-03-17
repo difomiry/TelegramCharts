@@ -12,6 +12,11 @@
 		84998F8522369ABD00F97A4C /* ChartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84998F8422369ABD00F97A4C /* ChartListViewController.swift */; };
 		84998F8722369E1B00F97A4C /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84998F8622369E1B00F97A4C /* ChartViewController.swift */; };
 		84998F892236A21500F97A4C /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84998F882236A21500F97A4C /* UINavigationController.swift */; };
+		849BAF94223E5D8D00332BC7 /* ThemeableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BAF93223E5D8D00332BC7 /* ThemeableSection.swift */; };
+		849BAF9B223E5EF800332BC7 /* ThemeSwitcherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BAF99223E5EF800332BC7 /* ThemeSwitcherCell.swift */; };
+		849BAF9C223E5EF800332BC7 /* ThemeSwitcherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849BAF9A223E5EF800332BC7 /* ThemeSwitcherCell.xib */; };
+		849BAF9F223E673500332BC7 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849BAF9D223E673400332BC7 /* SectionHeader.swift */; };
+		849BAFA4223E681200332BC7 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849BAFA3223E681200332BC7 /* SectionHeader.xib */; };
 		84B75D3B223A7A1A00458EB5 /* ThemeableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B75D3A223A7A1A00458EB5 /* ThemeableController.swift */; };
 		84B75D3D223A7EED00458EB5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B75D3C223A7EED00458EB5 /* Theme.swift */; };
 		84B75D3F223A879500458EB5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B75D3E223A879500458EB5 /* UIColor.swift */; };
@@ -32,6 +37,11 @@
 		84998F8422369ABD00F97A4C /* ChartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListViewController.swift; sourceTree = "<group>"; };
 		84998F8622369E1B00F97A4C /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		84998F882236A21500F97A4C /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		849BAF93223E5D8D00332BC7 /* ThemeableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeableSection.swift; sourceTree = "<group>"; };
+		849BAF99223E5EF800332BC7 /* ThemeSwitcherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSwitcherCell.swift; sourceTree = "<group>"; };
+		849BAF9A223E5EF800332BC7 /* ThemeSwitcherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeSwitcherCell.xib; sourceTree = "<group>"; };
+		849BAF9D223E673400332BC7 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		849BAFA3223E681200332BC7 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		84B75D3A223A7A1A00458EB5 /* ThemeableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeableController.swift; sourceTree = "<group>"; };
 		84B75D3C223A7EED00458EB5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		84B75D3E223A879500458EB5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -93,6 +103,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		849BAFA5223E762900332BC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84B75D39223A79E200458EB5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +118,7 @@
 				84B75D40223A893600458EB5 /* Themeable.swift */,
 				84B75D44223A9CBD00458EB5 /* ThemeableCell.swift */,
 				84B75D3A223A7A1A00458EB5 /* ThemeableController.swift */,
+				849BAF93223E5D8D00332BC7 /* ThemeableSection.swift */,
 				84B75D42223A894F00458EB5 /* ThemeManager.swift */,
 			);
 			path = Utilities;
@@ -111,6 +129,10 @@
 			children = (
 				84B75D49223AA4D400458EB5 /* ItemCell.swift */,
 				84B75D4A223AA4D400458EB5 /* ItemCell.xib */,
+				849BAF99223E5EF800332BC7 /* ThemeSwitcherCell.swift */,
+				849BAF9A223E5EF800332BC7 /* ThemeSwitcherCell.xib */,
+				849BAF9D223E673400332BC7 /* SectionHeader.swift */,
+				849BAFA3223E681200332BC7 /* SectionHeader.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -159,6 +181,7 @@
 				84998F8C2237763500F97A4C /* Providers */,
 				84B75D39223A79E200458EB5 /* Utilities */,
 				84998F8F223776C800F97A4C /* ViewControllers */,
+				849BAFA5223E762900332BC7 /* Views */,
 				84E49C5C223597D9003073D5 /* AppDelegate.swift */,
 			);
 			path = Sources;
@@ -223,7 +246,9 @@
 			files = (
 				84B75D4C223AA4D400458EB5 /* ItemCell.xib in Resources */,
 				84E49C67223597D9003073D5 /* LaunchScreen.storyboard in Resources */,
+				849BAFA4223E681200332BC7 /* SectionHeader.xib in Resources */,
 				84E49C64223597D9003073D5 /* Assets.xcassets in Resources */,
+				849BAF9C223E5EF800332BC7 /* ThemeSwitcherCell.xib in Resources */,
 				84E49C62223597D9003073D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,11 +267,14 @@
 				84998F8522369ABD00F97A4C /* ChartListViewController.swift in Sources */,
 				84B75D3F223A879500458EB5 /* UIColor.swift in Sources */,
 				843F026B223684E500B41CD4 /* DataProvider.swift in Sources */,
+				849BAF94223E5D8D00332BC7 /* ThemeableSection.swift in Sources */,
 				84998F892236A21500F97A4C /* UINavigationController.swift in Sources */,
 				84B75D41223A893600458EB5 /* Themeable.swift in Sources */,
 				843F02692236848000B41CD4 /* Chart.swift in Sources */,
 				84B75D45223A9CBD00458EB5 /* ThemeableCell.swift in Sources */,
+				849BAF9F223E673500332BC7 /* SectionHeader.swift in Sources */,
 				84998F8722369E1B00F97A4C /* ChartViewController.swift in Sources */,
+				849BAF9B223E5EF800332BC7 /* ThemeSwitcherCell.swift in Sources */,
 				84B75D43223A894F00458EB5 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
