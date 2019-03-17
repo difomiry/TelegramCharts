@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="0.0" reuseIdentifier="ChartSelectorCell" id="KGk-i7-Jjw" customClass="ChartSelectorCell" customModule="TelegramCharts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DE1-hk-TUF">
+                        <rect key="frame" x="26" y="17" width="10" height="10"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Y6X-6z-4F1"/>
+                            <constraint firstAttribute="height" constant="10" id="kb4-7Q-r8I"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0f-gB-xYo">
+                        <rect key="frame" x="56" y="11.5" width="196" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DE1-hk-TUF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2gS-Rs-evc"/>
+                    <constraint firstItem="q0f-gB-xYo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="70z-kg-zf1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="q0f-gB-xYo" secondAttribute="trailing" constant="20" id="8Ss-UJ-Y7C"/>
+                    <constraint firstItem="q0f-gB-xYo" firstAttribute="leading" secondItem="DE1-hk-TUF" secondAttribute="trailing" constant="20" id="h2e-Aj-Kla"/>
+                    <constraint firstItem="DE1-hk-TUF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="vPn-St-peb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="chartColorView" destination="DE1-hk-TUF" id="o5H-cK-l9H"/>
+                <outlet property="titleLabel" destination="q0f-gB-xYo" id="hnR-2n-eBc"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

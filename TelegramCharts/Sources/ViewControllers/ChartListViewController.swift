@@ -44,7 +44,7 @@ final class ChartListViewController: ThemeableController {
 extension ChartListViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    if let viewController = storyboard?.instantiateViewController(withIdentifier: "ChartViewController") as? ChartViewController {
+    if let viewController = ChartViewController.initialize(from: storyboard, with: charts![indexPath.row]) {
       navigationController?.pushViewController(viewController, animated: true)
     }
   }
